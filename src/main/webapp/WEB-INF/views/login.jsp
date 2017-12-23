@@ -25,5 +25,6 @@
         <input type="reset" value="重置" />
     </form>
     <a href="register"><input type="button" value="注册"> </a>
+
 </body>
 </html>

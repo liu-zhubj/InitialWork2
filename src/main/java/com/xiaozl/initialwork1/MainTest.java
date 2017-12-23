@@ -5,4 +5,9 @@ package com.xiaozl.initialwork1;
  * @date 2017/11/20
  */
 public class MainTest {
+    public static void toUpdate() {
+       System.out.println();
+    }
+
+
 }

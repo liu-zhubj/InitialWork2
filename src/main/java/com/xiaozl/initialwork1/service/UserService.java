@@ -15,4 +15,14 @@ public interface UserService {
     public void newUser(@Param("user") User user) throws Exception;
 
     public boolean checkLogin(User user) throws Exception;
+
+    public List<User> userList()throws  Exception;
+
+    public void insert(User user);
+    public void delete(int id);
+
+    public void update(User user);
+    public User findById(Integer id);
+
+
 }

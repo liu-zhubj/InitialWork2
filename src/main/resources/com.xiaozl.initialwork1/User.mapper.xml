@@ -18,4 +18,29 @@
         SELECT count(1) FROM t_user
         WHERE user_name = #{userName} AND password = #{password}
     </select>
+
+    <select id="userList" resultMap="userResultMap">
+        SELECT id , user_name , password FROM t_user
+    </select>
+
+    <insert id="insert" parameterType="User" keyProperty="id" >
+
+        insert into t_user (user_name,password) values(#{userName},#{password})
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        DELETE  FROM  t_user WHERE id=#{id}
+    </delete>
+
+
+
+    <update id="update" parameterType="user">
+        update t_user set user_name = #{userName} , password = #{password} where id=#{id}
+    </update>
+
+    <select id="findById" parameterType="Integer" resultType="user">
+        select id, user_name as userName, password
+        from t_user where id=#{id};
+    </select>
+
 </mapper>

@@ -1,5 +1,7 @@
 package com.xiaozl.initialwork1.entity;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -20,6 +22,16 @@ public class User {
     private String userName;
 
     private String password;
+
+    private MultipartFile image;
+
+    public MultipartFile getImage() {
+        return image;
+    }
+
+    public void setImage(MultipartFile image) {
+        this.image = image;
+    }
 
     public Integer getId() {
         return id;
